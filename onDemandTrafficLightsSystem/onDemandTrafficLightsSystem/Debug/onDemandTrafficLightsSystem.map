@@ -446,27 +446,27 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000      0xcc7
+.debug_info     0x00000000      0xc9d
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0x4e6 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega32a/avr5/crtatmega32a.o
- .debug_info    0x000004e6      0x3ff APP/APP.o
- .debug_info    0x000008e5       0x9f ECUAL/BUTTON/BUTTON.o
- .debug_info    0x00000984      0x158 ECUAL/LED/LED.o
- .debug_info    0x00000adc       0x6e main.o
- .debug_info    0x00000b4a       0xc0 MCAL/DIO/DIO.o
- .debug_info    0x00000c0a       0x51 MCAL/INTERRUPT/INTERRUPT.o
- .debug_info    0x00000c5b       0x6c MCAL/TIMER/TIMER.o
+ .debug_info    0x000004e6      0x3d5 APP/APP.o
+ .debug_info    0x000008bb       0x9f ECUAL/BUTTON/BUTTON.o
+ .debug_info    0x0000095a      0x158 ECUAL/LED/LED.o
+ .debug_info    0x00000ab2       0x6e main.o
+ .debug_info    0x00000b20       0xc0 MCAL/DIO/DIO.o
+ .debug_info    0x00000be0       0x51 MCAL/INTERRUPT/INTERRUPT.o
+ .debug_info    0x00000c31       0x6c MCAL/TIMER/TIMER.o
 
-.debug_abbrev   0x00000000      0x801
+.debug_abbrev   0x00000000      0x7e0
  *(.debug_abbrev)
  .debug_abbrev  0x00000000      0x4a3 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega32a/avr5/crtatmega32a.o
- .debug_abbrev  0x000004a3       0xd4 APP/APP.o
- .debug_abbrev  0x00000577       0x80 ECUAL/BUTTON/BUTTON.o
- .debug_abbrev  0x000005f7       0x80 ECUAL/LED/LED.o
- .debug_abbrev  0x00000677       0x68 main.o
- .debug_abbrev  0x000006df       0x7e MCAL/DIO/DIO.o
- .debug_abbrev  0x0000075d       0x44 MCAL/INTERRUPT/INTERRUPT.o
- .debug_abbrev  0x000007a1       0x60 MCAL/TIMER/TIMER.o
+ .debug_abbrev  0x000004a3       0xb3 APP/APP.o
+ .debug_abbrev  0x00000556       0x80 ECUAL/BUTTON/BUTTON.o
+ .debug_abbrev  0x000005d6       0x80 ECUAL/LED/LED.o
+ .debug_abbrev  0x00000656       0x68 main.o
+ .debug_abbrev  0x000006be       0x7e MCAL/DIO/DIO.o
+ .debug_abbrev  0x0000073c       0x44 MCAL/INTERRUPT/INTERRUPT.o
+ .debug_abbrev  0x00000780       0x60 MCAL/TIMER/TIMER.o
 
 .debug_line     0x00000000      0x751
  *(.debug_line .debug_line.* .debug_line_end)
@@ -492,12 +492,12 @@ END GROUP
 .debug_str      0x00000000      0x3fa
  *(.debug_str)
  .debug_str     0x00000000      0x196 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega32a/avr5/crtatmega32a.o
- .debug_str     0x00000196      0x18b APP/APP.o
- .debug_str     0x00000321       0x3c ECUAL/BUTTON/BUTTON.o
+ .debug_str     0x00000196      0x186 APP/APP.o
+ .debug_str     0x0000031c       0x3c ECUAL/BUTTON/BUTTON.o
                                 0x16d (size before relaxing)
- .debug_str     0x0000035d       0x24 ECUAL/LED/LED.o
+ .debug_str     0x00000358       0x24 ECUAL/LED/LED.o
                                 0x178 (size before relaxing)
- .debug_str     0x00000381        0xc main.o
+ .debug_str     0x0000037c       0x11 main.o
                                 0x13f (size before relaxing)
  .debug_str     0x0000038d       0x29 MCAL/DIO/DIO.o
                                 0x172 (size before relaxing)

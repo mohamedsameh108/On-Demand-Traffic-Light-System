@@ -37,8 +37,8 @@
 #define TIFR *((volatile uint8_t *)0x58)
 
 //Interrupt
-#define GICR    *((volatile uint8_t *) 0x5B)
-#define MCUCR   *((volatile uint8_t *) 0x55)
-#define MCUCSR  *((volatile uint8_t *) 0x54) 
+#define GICR *((volatile uint8_t *) 0x5B)
+#define MCUCR *((volatile uint8_t *) 0x55)
+#define MCUCSR *((volatile uint8_t *) 0x54) 
 
 #endif /* REGISTERS_H_ */

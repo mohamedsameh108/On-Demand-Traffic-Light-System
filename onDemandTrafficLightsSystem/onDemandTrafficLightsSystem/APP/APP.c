@@ -18,6 +18,7 @@ void appMain()
 	ledInit(PORT_B,0);
 	ledInit(PORT_B,1);
 	ledInit(PORT_B,2);
+	
 	buttonInit(PORT_D,2);
 	
 	buttonInterrupt();
@@ -65,7 +66,7 @@ void appMain()
 	}
 }
 
-ISR(__vector_1 )
+ISR(__vector_1)
 {
 	if(mode == 1 || mode == 2)
 	{
@@ -76,6 +77,6 @@ ISR(__vector_1 )
 		ledOff(PORT_B,1);
 		ledOff(PORT_B,2);
 		mode = 3;
-		main();
+		appMain();
 	}
 }
