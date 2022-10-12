@@ -1,48 +1,42 @@
-main.d main.o: .././main.c .././ECUAL/LED/LED.h \
- .././ECUAL/LED/../../MCAL/initEnvironment/typeDef.h \
- .././ECUAL/LED/../../MCAL/DIO/DIO.h \
- .././ECUAL/LED/../../MCAL/DIO/../initEnvironment/typeDef.h \
- c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\interrupt.h \
- c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\io.h \
- c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\sfr_defs.h \
- c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\inttypes.h \
- c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stdint.h \
- c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\stdint.h \
- C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\include/avr/iom32a.h \
- c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\portpins.h \
- c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\common.h \
- c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\version.h \
- c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\fuse.h \
- c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\lock.h
+main.d main.o: .././main.c .././APP/APP.h \
+ .././APP/../MCAL/INTERRUPT/INTERRUPT.h \
+ .././APP/../MCAL/INTERRUPT/../initEnvironment/registers.h \
+ .././APP/../MCAL/INTERRUPT/../initEnvironment/typeDef.h \
+ .././APP/../MCAL/TIMER/TIMER.h \
+ .././APP/../MCAL/TIMER/../initEnvironment/registers.h \
+ .././APP/../ECUAL/LED/LED.h \
+ .././APP/../ECUAL/LED/../../MCAL/initEnvironment/typeDef.h \
+ .././APP/../ECUAL/LED/../../MCAL/DIO/DIO.h \
+ .././APP/../ECUAL/LED/../../MCAL/DIO/../initEnvironment/typeDef.h \
+ .././APP/../ECUAL/LED/../../MCAL/DIO/../initEnvironment/registers.h \
+ .././APP/../ECUAL/BUTTON/BUTTON.h \
+ .././APP/../ECUAL/BUTTON/../../MCAL/initEnvironment/typeDef.h \
+ .././APP/../ECUAL/BUTTON/../../MCAL/DIO/DIO.h
 
-.././ECUAL/LED/LED.h:
+.././APP/APP.h:
 
-.././ECUAL/LED/../../MCAL/initEnvironment/typeDef.h:
+.././APP/../MCAL/INTERRUPT/INTERRUPT.h:
 
-.././ECUAL/LED/../../MCAL/DIO/DIO.h:
+.././APP/../MCAL/INTERRUPT/../initEnvironment/registers.h:
 
-.././ECUAL/LED/../../MCAL/DIO/../initEnvironment/typeDef.h:
+.././APP/../MCAL/INTERRUPT/../initEnvironment/typeDef.h:
 
-c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\interrupt.h:
+.././APP/../MCAL/TIMER/TIMER.h:
 
-c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\io.h:
+.././APP/../MCAL/TIMER/../initEnvironment/registers.h:
 
-c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\sfr_defs.h:
+.././APP/../ECUAL/LED/LED.h:
 
-c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\inttypes.h:
+.././APP/../ECUAL/LED/../../MCAL/initEnvironment/typeDef.h:
 
-c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stdint.h:
+.././APP/../ECUAL/LED/../../MCAL/DIO/DIO.h:
 
-c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\stdint.h:
+.././APP/../ECUAL/LED/../../MCAL/DIO/../initEnvironment/typeDef.h:
 
-C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\include/avr/iom32a.h:
+.././APP/../ECUAL/LED/../../MCAL/DIO/../initEnvironment/registers.h:
 
-c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\portpins.h:
+.././APP/../ECUAL/BUTTON/BUTTON.h:
 
-c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\common.h:
+.././APP/../ECUAL/BUTTON/../../MCAL/initEnvironment/typeDef.h:
 
-c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\version.h:
-
-c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\fuse.h:
-
-c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\lock.h:
+.././APP/../ECUAL/BUTTON/../../MCAL/DIO/DIO.h:

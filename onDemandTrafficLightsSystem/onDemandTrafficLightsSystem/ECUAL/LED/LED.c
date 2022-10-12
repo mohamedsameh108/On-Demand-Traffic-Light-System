@@ -6,7 +6,6 @@
  */ 
 
 #include "LED.h"
-int tempReturnLEDStatusValue;
 void ledInit(uint8_t portNum , uint8_t ledNum)
 {
 	DIO_INIT(portNum,ledNum,OUT);

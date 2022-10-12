@@ -10,6 +10,7 @@
 #define DIO_H_
 
 #include "../initEnvironment/typeDef.h"
+#include "../initEnvironment/registers.h"
 
 #define PORT_A 'A'
 #define PORT_B 'B'
@@ -24,11 +25,7 @@
 
 void DIO_INIT(uint8_t portNum , uint8_t pinNum , uint8_t direction);
 void DIO_Write(uint8_t portNum , uint8_t pinNum , uint8_t value);
-void DIO_Read(uint8_t portNum , uint8_t pinNum , uint8_t * value);
-void DIO_Toggle(uint8_t portNum , uint8_t pinNum);
 
-
-void delayTimer();
 
 
 #endif /* DIO_H_ */

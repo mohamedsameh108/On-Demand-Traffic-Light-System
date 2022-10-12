@@ -120,6 +120,18 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="APP\APP.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\APP.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ECUAL\BUTTON\BUTTON.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ECUAL\BUTTON\BUTTON.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="ECUAL\LED\LED.c">
       <SubType>compile</SubType>
     </Compile>
@@ -141,13 +153,29 @@
     <Compile Include="MCAL\initEnvironment\typeDef.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="MCAL\INTERRUPT\INTERRUPT.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\INTERRUPT\INTERRUPT.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\TIMER\TIMER.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\TIMER\TIMER.h">
+      <SubType>compile</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ECUAL" />
     <Folder Include="ECUAL\LED" />
+    <Folder Include="ECUAL\BUTTON" />
     <Folder Include="MCAL" />
     <Folder Include="MCAL\DIO" />
     <Folder Include="MCAL\initEnvironment" />
+    <Folder Include="MCAL\INTERRUPT\" />
+    <Folder Include="MCAL\TIMER" />
+    <Folder Include="APP" />
   </ItemGroup>
   <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
 </Project>

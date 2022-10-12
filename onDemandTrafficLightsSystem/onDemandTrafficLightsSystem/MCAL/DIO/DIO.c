@@ -6,24 +6,9 @@
  */ 
 
 #include "DIO.h"
-#include "../initEnvironment/registers.h"
 
-#define numberOfOverFlows 20
 
-void delayTimer()
-{
-	int overFlowCounter = 0;
-	TCCR0 |= (1 << 2)|(1 << 0);
-	TCNT0 = 245;
-	while (overFlowCounter < numberOfOverFlows)
-	{
-		while ((TIFR & (1<<0)) == 0);
-		TIFR |= (1<<0);
-		overFlowCounter++;
-		TCNT0 = 0;
-	}
-	TCCR0 = 0x00;
-}
+
 void DIO_INIT(uint8_t portNum , uint8_t pinNum , uint8_t direction)
 {
 	switch (portNum)
@@ -72,6 +57,7 @@ void DIO_INIT(uint8_t portNum , uint8_t pinNum , uint8_t direction)
 			break;
 	}
 }
+
 void DIO_Write(uint8_t portNum , uint8_t pinNum , uint8_t value)
 {
 	switch (portNum)
@@ -115,26 +101,6 @@ void DIO_Write(uint8_t portNum , uint8_t pinNum , uint8_t value)
 			{
 				PORTD |=(1<<pinNum);
 			}
-			break;
-		default:
-			break;
-	}
-}
-void DIO_Read(uint8_t portNum , uint8_t pinNum , uint8_t *value)
-{
-	switch (portNum)
-	{
-		case PORT_A:
-			*value = (PINA & (1<<pinNum))>>pinNum;
-			break;
-		case PORT_B:
-			*value = (PINB & (1<<pinNum))>>pinNum;
-			break;
-		case PORT_C:
-			*value = (PINC & (1<<pinNum))>>pinNum;
-			break;
-		case PORT_D:
-			*value = (PIND & (1<<pinNum))>>pinNum;
 			break;
 		default:
 			break;
