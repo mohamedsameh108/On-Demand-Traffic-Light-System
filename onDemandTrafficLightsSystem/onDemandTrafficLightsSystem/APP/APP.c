@@ -8,7 +8,7 @@
 #include "APP.h"
 
 
-int mode = 0 , enableInterrupt = 0;
+int mode = 0 ;
 void appMain()
 {
 	
@@ -37,11 +37,6 @@ void appMain()
 		}
 		else if(mode == 1)
 		{
-			if(enableInterrupt == 1)
-			{
-				Enable_Global_Interrupt();
-				enableInterrupt = 0;
-			}
 			ledOn(PORT_A,1);
 			ledOn(PORT_B,1);
 			delayTimer();
@@ -81,8 +76,6 @@ ISR(__vector_1 )
 		ledOff(PORT_B,1);
 		ledOff(PORT_B,2);
 		mode = 3;
-		Disable_Global_Interrupt();
-		enableInterrupt = 1;
 		main();
 	}
 }

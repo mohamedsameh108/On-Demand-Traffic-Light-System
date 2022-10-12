@@ -15,7 +15,6 @@
 void vector(void)__attribute__((signal,__INTR_ATTRS))__VA_ARGS__;   \
 void vector(void)
 
-#define Disable_Global_Interrupt() __asm__ __volatile__("cli" ::: "memory")
 #define Enable_Global_Interrupt()  __asm__ __volatile__("sei" ::: "memory")
 
 void buttonInterrupt();
