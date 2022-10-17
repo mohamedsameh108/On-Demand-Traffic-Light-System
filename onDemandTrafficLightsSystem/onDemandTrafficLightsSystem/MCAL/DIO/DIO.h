@@ -23,8 +23,8 @@
 #define LOW 0
 #define HIGH 1
 
-void DIO_INIT(uint8_t portNum , uint8_t pinNum , uint8_t direction);
-void DIO_Write(uint8_t portNum , uint8_t pinNum , uint8_t value);
+DIOReturnState DIO_INIT(uint8_t portNum , uint8_t pinNum , uint8_t direction);
+DIOReturnState DIO_Write(uint8_t portNum , uint8_t pinNum , uint8_t value);
 
 
 

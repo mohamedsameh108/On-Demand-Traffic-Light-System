@@ -7,7 +7,7 @@
 
 #include "APP/APP.h"
 
-int main(void)
+void main(void)
 {
 	while(1)
 	{

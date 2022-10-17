@@ -11,10 +11,12 @@
 
 #include "../../MCAL/initEnvironment/typeDef.h"
 #include "../../MCAL/DIO/DIO.h"
+#include "../../MCAL/TIMER/TIMER.h"
 
-void ledInit(uint8_t portNum , uint8_t ledNum);
-void ledOn(uint8_t portNum , uint8_t ledNum);
-void ledOff(uint8_t portNum , uint8_t ledNum);
+LEDReturnState ledInit(uint8_t portNum , uint8_t ledNum);
+LEDReturnState ledOn(uint8_t portNum , uint8_t ledNum);
+LEDReturnState ledOff(uint8_t portNum , uint8_t ledNum);
+LEDReturnState ledToogle(uint8_t portNum , uint8_t ledNum,uint8_t portNum1 , uint8_t ledNum1);
 
 
 

@@ -12,7 +12,7 @@
 #include "../../MCAL/initEnvironment/typeDef.h"
 #include "../../MCAL/DIO/DIO.h"
 
-void buttonInit(uint8_t portNum , uint8_t buttonNum);
+ButtonReturnState buttonInit(uint8_t portNum , uint8_t buttonNum);
 
 
 

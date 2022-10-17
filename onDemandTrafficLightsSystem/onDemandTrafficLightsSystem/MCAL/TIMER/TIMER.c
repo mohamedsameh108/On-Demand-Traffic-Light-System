@@ -21,3 +21,12 @@ void delayTimer()
 	}
 	TCCR0 = 0x00;
 }
+
+void toggleTimer()
+{
+	TCCR0 |= (1 << 2)|(1 << 0);
+	TCNT0 = 11.859375;
+	while ((TIFR & (1<<0)) == 0);
+	TIFR |= (1<<0);
+	TCCR0 = 0x00;
+}

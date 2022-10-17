@@ -9,7 +9,7 @@
 
 
 
-void DIO_INIT(uint8_t portNum , uint8_t pinNum , uint8_t direction)
+DIOReturnState DIO_INIT(uint8_t portNum , uint8_t pinNum , uint8_t direction)
 {
 	switch (portNum)
 	{
@@ -17,48 +17,56 @@ void DIO_INIT(uint8_t portNum , uint8_t pinNum , uint8_t direction)
 			if(direction == IN)
 			{
 				DDRA &=~(1<<pinNum);
+				return DIO_OK;
 			}
 			else if (direction == OUT)
 			{
 				DDRA |=(1<<pinNum);
+				return DIO_OK;
 			}
-			break;
+			return DIO_Error_INIT;
 		case PORT_B:
 			if(direction == IN)
 			{
 				DDRB &=~(1<<pinNum);
+				return DIO_OK;
 			}
 			else if (direction == OUT)
 			{
 				DDRB |=(1<<pinNum);
+				return DIO_OK;
 			}
-			break;
+			return DIO_Error_INIT;
 		case PORT_C:
 			if(direction == IN)
 			{
 				DDRC &=~(1<<pinNum);
+				return DIO_OK;
 			}
 			else if (direction == OUT)
 			{
 				DDRC |=(1<<pinNum);
+				return DIO_OK;
 			}
-			break;
+			return DIO_Error_INIT;
 		case PORT_D:
 			if(direction == IN)
 			{
 				DDRD &=~(1<<pinNum);
+				return DIO_OK;
 			}
 			else if (direction == OUT)
 			{
 				DDRD |=(1<<pinNum);
+				return DIO_OK;
 			}
-			break;
+			return DIO_Error_INIT;
 		default:
-			break;
+			return DIO_Error_INIT;
 	}
 }
 
-void DIO_Write(uint8_t portNum , uint8_t pinNum , uint8_t value)
+DIOReturnState DIO_Write(uint8_t portNum , uint8_t pinNum , uint8_t value)
 {
 	switch (portNum)
 	{
@@ -66,43 +74,51 @@ void DIO_Write(uint8_t portNum , uint8_t pinNum , uint8_t value)
 			if(value == LOW)
 			{
 				PORTA &=~(1<<pinNum);
+				return DIO_OK;
 			}
 			else if (value == HIGH)
 			{
 				PORTA |=(1<<pinNum);
+				return DIO_OK;
 			}
-			break;
+			return DIO_Error_Write;
 		case PORT_B:
 			if(value == LOW)
 			{
 				PORTB &=~(1<<pinNum);
+				return DIO_OK;
 			}
 			else if (value == HIGH)
 			{
 				PORTB |=(1<<pinNum);
+				return DIO_OK;
 			}
-			break;
+			return DIO_Error_Write;
 		case PORT_C:
 			if(value == LOW)
 			{
 				PORTC &=~(1<<pinNum);
+				return DIO_OK;
 			}
 			else if (value == HIGH)
 			{
 				PORTC |=(1<<pinNum);
+				return DIO_OK;
 			}
-			break;
+			return DIO_Error_Write;
 		case PORT_D:
 			if(value == LOW)
 			{
 				PORTD &=~(1<<pinNum);
+				return DIO_OK;
 			}
 			else if (value == HIGH)
 			{
 				PORTD |=(1<<pinNum);
+				return DIO_OK;
 			}
-			break;
+			return DIO_Error_Write;
 		default:
-			break;
+			return DIO_Error_Write;
 	}
 }

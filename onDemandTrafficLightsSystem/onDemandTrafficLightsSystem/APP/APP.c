@@ -29,24 +29,6 @@ void appMain()
 	{
 		if(mode == 0)
 		{
-			ledOn(PORT_A,0);
-			ledOn(PORT_B,2);
-			delayTimer();
-			ledOff(PORT_A,0);
-			ledOff(PORT_B,2);
-			mode++;
-		}
-		else if(mode == 1)
-		{
-			ledOn(PORT_A,1);
-			ledOn(PORT_B,1);
-			delayTimer();
-			ledOff(PORT_A,1);
-			ledOff(PORT_B,1);
-			mode++;
-		}
-		else if(mode == 2)
-		{
 			ledOn(PORT_A,2);
 			ledOn(PORT_B,0);
 			delayTimer();
@@ -54,13 +36,23 @@ void appMain()
 			ledOff(PORT_B,0);
 			mode++;
 		}
+		else if(mode == 1)
+		{
+			ledToogle(PORT_A,1,PORT_B,1);
+			mode++;
+		}
+		else if(mode == 2)
+		{
+			ledOn(PORT_A,0);
+			ledOn(PORT_B,2);
+			delayTimer();
+			ledOff(PORT_A,0);
+			ledOff(PORT_B,2);
+			mode++;
+		}
 		else if(mode == 3)
 		{
-			ledOn(PORT_A,1);
-			ledOn(PORT_B,1);
-			delayTimer();
-			ledOff(PORT_A,1);
-			ledOff(PORT_B,1);
+			ledToogle(PORT_A,1,PORT_B,1);
 			mode = 0;
 		}
 	}
@@ -68,7 +60,7 @@ void appMain()
 
 ISR(__vector_1)
 {
-	if(mode == 1 || mode == 2)
+	if(mode == 0 || mode == 3)
 	{
 		ledOff(PORT_A,0);
 		ledOff(PORT_A,1);
@@ -76,7 +68,7 @@ ISR(__vector_1)
 		ledOff(PORT_B,0);
 		ledOff(PORT_B,1);
 		ledOff(PORT_B,2);
-		mode = 3;
+		mode = 1;
 		appMain();
 	}
 }

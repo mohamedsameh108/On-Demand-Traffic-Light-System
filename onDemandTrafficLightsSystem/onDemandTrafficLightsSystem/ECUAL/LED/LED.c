@@ -6,15 +6,45 @@
  */ 
 
 #include "LED.h"
-void ledInit(uint8_t portNum , uint8_t ledNum)
+LEDReturnState ledInit(uint8_t portNum , uint8_t ledNum)
 {
-	DIO_INIT(portNum,ledNum,OUT);
+	if(DIO_INIT(portNum,ledNum,OUT) == DIO_OK)
+	{
+		return LED_OK;
+	}
+	return LED_Error_INIT;
 }
-void ledOn(uint8_t portNum , uint8_t ledNum)
+LEDReturnState ledOn(uint8_t portNum , uint8_t ledNum)
 {
-	DIO_Write(portNum,ledNum,HIGH);
+	if(DIO_Write(portNum,ledNum,HIGH) == DIO_OK)
+	{
+		return LED_OK;
+	}
+	return LED_Error_On;
 }
-void ledOff(uint8_t portNum , uint8_t ledNum)
+LEDReturnState ledOff(uint8_t portNum , uint8_t ledNum)
 {
-	DIO_Write(portNum,ledNum,LOW);
+	if(DIO_Write(portNum,ledNum,LOW) == DIO_OK)
+	{
+		return LED_OK;
+	}
+	return LED_Error_Off;
+}
+LEDReturnState ledToogle(uint8_t portNum , uint8_t ledNum,uint8_t portNum1 , uint8_t ledNum1)
+{
+	if(DIO_Write(portNum,ledNum,LOW) == DIO_OK && DIO_Write(portNum1,ledNum1,LOW) == DIO_OK)
+	{
+		for(int i = 0 ; i < 10 ; i++)
+		{
+			DIO_Write(portNum,ledNum,HIGH);
+			DIO_Write(portNum1,ledNum1,HIGH);
+			toggleTimer();
+			DIO_Write(portNum,ledNum,LOW);
+			DIO_Write(portNum1,ledNum1,LOW);
+			toggleTimer();
+		}
+		return LED_OK;
+	}
+	return LED_Error_Toggle;
+	
 }

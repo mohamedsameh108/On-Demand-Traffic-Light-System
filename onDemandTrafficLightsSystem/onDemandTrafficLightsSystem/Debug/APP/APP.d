@@ -9,6 +9,7 @@ APP/APP.d APP/APP.o: ../APP/APP.c ../APP/APP.h \
  ../APP/../ECUAL/LED/../../MCAL/DIO/DIO.h \
  ../APP/../ECUAL/LED/../../MCAL/DIO/../initEnvironment/typeDef.h \
  ../APP/../ECUAL/LED/../../MCAL/DIO/../initEnvironment/registers.h \
+ ../APP/../ECUAL/LED/../../MCAL/TIMER/TIMER.h \
  ../APP/../ECUAL/BUTTON/BUTTON.h \
  ../APP/../ECUAL/BUTTON/../../MCAL/initEnvironment/typeDef.h \
  ../APP/../ECUAL/BUTTON/../../MCAL/DIO/DIO.h
@@ -34,6 +35,8 @@ APP/APP.d APP/APP.o: ../APP/APP.c ../APP/APP.h \
 ../APP/../ECUAL/LED/../../MCAL/DIO/../initEnvironment/typeDef.h:
 
 ../APP/../ECUAL/LED/../../MCAL/DIO/../initEnvironment/registers.h:
+
+../APP/../ECUAL/LED/../../MCAL/TIMER/TIMER.h:
 
 ../APP/../ECUAL/BUTTON/BUTTON.h:
 

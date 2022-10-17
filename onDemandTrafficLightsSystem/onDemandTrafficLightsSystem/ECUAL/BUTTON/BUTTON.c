@@ -7,7 +7,11 @@
 
 #include "BUTTON.h"
 
-void buttonInit(uint8_t portNum , uint8_t buttonNum)
+ButtonReturnState buttonInit(uint8_t portNum , uint8_t buttonNum)
 {
-	DIO_INIT(portNum,buttonNum,IN);
+	if(DIO_INIT(portNum,buttonNum,IN) == DIO_OK)
+	{
+		return Button_OK;
+	}
+	return Button_Error_INIT;
 }
