@@ -16,5 +16,7 @@
 
 void delayTimer();
 
+void toggleTimer();
+
 
 #endif /* TIMER_H_ */
